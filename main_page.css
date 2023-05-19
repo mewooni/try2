@@ -1,0 +1,141 @@
+.pic_back{
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.ibb.co/sR014By/intro.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; /*new*/
+  justify-content: center;
+  align-items: center;
+}
+
+.pic_back span{
+  font-size: 5em;
+  font-weight: bold;
+  color: #ffffff;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.custom-btn {
+  width: 200px;
+  height: 70px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn {
+  background-color: rgb(196, 84, 185);
+  background-image: linear-gradient(315deg, rgb(196, 84, 185) 0%, #ab67ab 74%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn:before,
+.btn:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #ab67ab;
+  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+  transition: all 0.3s ease;
+}
+.btn:before{
+  height: 0%;
+  width: 2px;
+}
+.btn:after {
+  width: 0%;
+  height: 2px;
+}
+.btn:hover:before {
+  height: 100%;
+}
+.btn:hover:after {
+  width: 100%;
+}
+.btn:hover{
+  background: transparent;
+}
+.btn span:hover{
+  color: #ab67ab;
+}
+.btn span:before,
+.btn span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #ab67ab;
+  transition: all 0.3s ease;
+}
+.btn span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn span:hover:before {
+  height: 100%;
+}
+.btn span:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 770px) {
+  .registration{
+    flex-direction:column;
+  }
+  .submitform {
+    height: calc(100vh - 40px);
+  }
+  .submitform .submit {
+    width: 100%;
+  }
+  .pic_container{
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+    .registration{
+        flex-direction:column;
+    }
+    .submitform .submit {
+        width: 80%;
+    }
+}
+@media (max-width: 700px) {
+    .pic_back > span {
+        font-size:3em;
+    }
+}
+@media (max-width: 440px) {
+    .pic_back > span {
+        font-size:2em;
+    }
+}
